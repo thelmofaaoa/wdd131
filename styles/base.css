@@ -1,0 +1,318 @@
+/* ------------------------------
+   GENERAL
+-------------------------------- */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    max-width: 1440px;
+    font-family: "Roboto", Arial, sans-serif;
+    color: #222;
+    background-color: white;
+}
+
+
+/* ------------------------------
+   HEADER
+-------------------------------- */
+
+header {
+    margin: 6px 45px 0;
+    background-color: #23577d;
+    color: white;
+}
+
+#course-title {
+    display: block;
+    text-align: center;
+    padding: 20px;
+    font-size: 28px;
+    font-weight: 500;
+}
+
+
+/* ------------------------------
+   NAVIGATION
+-------------------------------- */
+
+nav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #333333;
+}
+
+nav a {
+    flex: 1;
+    padding: 12px;
+    text-align: center;
+
+    color: white;
+    text-decoration: none;
+
+    font-size: 21px;
+    font-weight: 400;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #23577d;
+    color: #ffffff;
+}
+
+
+/* ------------------------------
+   MAIN
+-------------------------------- */
+
+main {
+    max-width: 1240px;
+    margin: 35px auto;
+    padding: 0 20px;
+}
+
+h1 {
+    margin: 0 0 28px;
+
+    text-align: center;
+
+    font-size: 42px;
+    font-weight: 400;
+
+    color: #222;
+}
+
+
+/* ------------------------------
+   TWO COLUMN LAYOUT
+-------------------------------- */
+
+.content {
+    display: grid;
+    grid-template-columns: 2.2fr 1fr;
+    gap: 12px;
+}
+
+
+/* ------------------------------
+   CARDS
+-------------------------------- */
+
+.card {
+    border: 1px solid #bdbdbd;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: white;
+}
+
+
+/* ------------------------------
+   CARD HEADINGS
+-------------------------------- */
+
+.card h2 {
+    margin: 0;
+
+    padding: 14px;
+
+    text-align: center;
+
+    background-color: #23577d;
+    color: white;
+
+    font-size: 22px;
+}
+
+
+/* ------------------------------
+   ABOUT ME
+-------------------------------- */
+
+.about-content {
+    display: grid;
+    grid-template-columns: 1fr 170px;
+
+    gap: 25px;
+
+    padding: 20px 22px 10px;
+}
+
+.about-content p {
+    margin: 10px 0;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+.profile {
+    width: 165px;
+    height: 225px;
+
+    object-fit: cover;
+
+    border: 1px solid #999;
+}
+
+
+/* ------------------------------
+   COUNTRY
+-------------------------------- */
+
+.country {
+    margin: 0 22px 20px;
+}
+
+.country h3 {
+    margin: 10px auto 15px;
+
+    max-width: 510px;
+
+    padding-bottom: 5px;
+
+    text-align: center;
+
+    font-size: 21px;
+
+    border-bottom: 2px solid #ccc;
+}
+
+.country-content {
+    display: grid;
+    grid-template-columns: 180px 1fr;
+
+    gap: 25px;
+
+    align-items: start;
+}
+
+.flag-container {
+    text-align: center;
+}
+
+.flag {
+    width: 180px;
+    height: 115px;
+
+    object-fit: cover;
+
+    border: 1px solid #aaa;
+}
+
+.caption {
+    margin-top: 8px;
+
+    font-style: italic;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.country-content > p {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 1.8;
+}
+
+
+/* ------------------------------
+   WEB DEV RESOURCES
+-------------------------------- */
+
+.resources-card ul {
+    margin-top: 135px;
+    padding-left: 55px;
+    padding-right: 20px;
+}
+
+.resources-card li {
+    margin-bottom: 12px;
+
+    font-size: 18px;
+}
+
+.resources-card a {
+    color: #0000ee;
+}
+
+.resources-card a:hover {
+    color: #23577d;
+}
+
+
+/* ------------------------------
+   FOOTER
+-------------------------------- */
+
+footer {
+    margin: 30px 24px 0;
+
+    padding: 20px;
+
+    text-align: center;
+
+    background-color: #23577d;
+    color: white;
+
+    font-size: 18px;
+}
+
+footer p {
+    margin: 4px;
+}
+
+#lastModified {
+    color: #ffff00;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+-------------------------------- */
+
+@media screen and (max-width: 850px) {
+
+    header {
+        margin: 6px 15px 0;
+    }
+
+    #course-title {
+        font-size: 22px;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        width: 100%;
+    }
+
+    .content {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        grid-template-columns: 1fr;
+    }
+
+    .profile {
+        margin: auto;
+    }
+
+    .country-content {
+        grid-template-columns: 1fr;
+    }
+
+    .flag {
+        margin: auto;
+    }
+
+    .resources-card ul {
+        margin-top: 20px;
+    }
+}
