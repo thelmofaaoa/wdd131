@@ -1,0 +1,167 @@
+:root {
+    --primary-color: #123b5d;
+    --secondary-color: #ffffff;
+    --background-color: #f4f7f9;
+    --card-color: #ffffff;
+    --text-color: #1f2933;
+    --heading-color: #123b5d;
+    --border-color: #b8c4cc;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--text-color);
+    background-color: var(--background-color);
+    line-height: 1.5;
+}
+
+header {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h1 {
+    margin: 0;
+    text-align: center;
+    font-size: 2rem;
+}
+
+#menu {
+    display: block;
+    margin: 1rem auto 0;
+    padding: 0.4rem 0.8rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    border: 2px solid var(--secondary-color);
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+#menu:hover,
+#menu:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.25rem;
+    margin-top: 1rem;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1.5rem 1rem 2rem;
+}
+
+main h2 {
+    color: var(--heading-color);
+    text-align: center;
+    margin: 0 0 1.5rem;
+    font-size: 2rem;
+}
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.temple-card {
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+}
+
+.temple-card h3 {
+    color: var(--heading-color);
+    margin: 0 0 0.75rem;
+    font-size: 1.35rem;
+}
+
+.temple-card p {
+    margin: 0.5rem 0;
+}
+
+.temple-card img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin-top: 1rem;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+footer p {
+    margin: 0.25rem;
+}
+
+@media screen and (min-width: 700px) {
+    header {
+        padding: 1.25rem;
+    }
+
+    #menu {
+        display: none;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        margin-top: 0.75rem;
+        gap: 1rem;
+    }
+
+    .temple-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width: 1000px) {
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
