@@ -1,0 +1,76 @@
+@media screen and (min-width: 700px) {
+
+    /* ------------------------------
+       HEADER
+    ------------------------------ */
+
+    .header-content {
+        min-height: 64px;
+        padding: 0 18px;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    /* ------------------------------
+       HAMBURGER
+    ------------------------------ */
+
+    #menu {
+        display: none;
+    }
+
+    /* ------------------------------
+       NAVIGATION
+    ------------------------------ */
+
+    nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 12px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 16px;
+    }
+
+    /* ------------------------------
+       MAIN
+    ------------------------------ */
+
+    main {
+        max-width: 750px;
+        padding: 25px 20px;
+    }
+
+    h1 {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+
+    /* ------------------------------
+       TEMPLE GRID
+    ------------------------------ */
+
+    .temple-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 25px 12px;
+    }
+
+    /* ------------------------------
+       IMAGES
+    ------------------------------ */
+
+    figure img {
+        width: 100%;
+        aspect-ratio: 16 / 10;
+        object-fit: cover;
+    }
+
+    figcaption {
+        font-size: 12px;
+    }
+}

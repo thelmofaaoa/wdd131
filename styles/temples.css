@@ -1,0 +1,156 @@
+/* ------------------------------
+   GENERAL
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background-color: white;
+    color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* ------------------------------
+   HEADER
+------------------------------ */
+
+header {
+    max-width: 750px;
+    margin: 23px auto 0;
+    background-color: #4b0873;
+    color: white;
+}
+
+.header-content {
+    min-height: 64px;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h2 {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 24px;
+}
+
+/* ------------------------------
+   HAMBURGER
+------------------------------ */
+
+#menu {
+    display: block;
+    border: none;
+    background: transparent;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+/* ------------------------------
+   NAVIGATION
+------------------------------ */
+
+nav {
+    display: none;
+    flex-direction: column;
+}
+
+nav.open {
+    display: flex;
+}
+
+nav a {
+    padding: 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: center;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: #68109a;
+    text-decoration: underline;
+}
+
+/* ------------------------------
+   MAIN
+------------------------------ */
+
+main {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 25px 20px;
+}
+
+h1 {
+    margin: 0 0 16px;
+    color: #111;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: normal;
+    text-align: center;
+}
+
+/* ------------------------------
+   TEMPLE GRID
+------------------------------ */
+
+.temple-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+/* ------------------------------
+   FIGURES
+------------------------------ */
+
+figure {
+    margin: 0;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    text-align: center;
+}
+
+figure img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+}
+
+figcaption {
+    margin-top: 3px;
+    color: #4b0873;
+    font-size: 12px;
+    font-weight: normal;
+}
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
+footer {
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 9px 10px;
+    background-color: #4b0873;
+    color: white;
+    text-align: center;
+    font-size: 11px;
+}
+
+footer p {
+    margin: 2px;
+}
