@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn about Tonga, a beautiful island country in the South Pacific, including its geography, culture, and weather.">
+    <meta name="author" content="Thelmo Fa'aoa">
+    <title>Tonga | WDD 131 Country Page</title>
+
+
+<link rel="stylesheet" href="styles/place.css">
+<script src="scripts/place.js" defer></script>
+
+
+</head>
+
+<body>
+    <header>
+        <h1>Tonga</h1>
+    </header>
+
+
+<main>
+    <section class="hero">
+        <picture>
+            <source
+                media="(min-width: 700px)"
+                srcset="images/tonga-large.webp">
+            <img
+                src="images/tonga-small.webp"
+                srcset="images/tonga-small.webp 700w, images/tonga-large.webp 1200w"
+                sizes="(max-width: 699px) 100vw, 1200px"
+                alt="Beautiful tropical coastline of Tonga"
+                width="1200"
+                height="675">
+        </picture>
+    </section>
+
+    <section class="content-grid">
+        <section class="about card">
+            <h2>About Tonga</h2>
+            <p>
+                Tonga is an island country in the South Pacific Ocean.
+                It is made up of many islands and is known for its
+                beautiful beaches, clear ocean water, coral reefs,
+                traditional culture, and friendly communities.
+            </p>
+            <p>
+                Tonga has a rich history and strong cultural traditions.
+                Family, community, respect, and hospitality are important
+                parts of Tongan life. The capital city is Nuku'alofa,
+                located on the island of Tongatapu.
+            </p>
+        </section>
+
+        <section class="weather card">
+            <h2>Weather</h2>
+
+            <div class="weather-icon">
+                <img src="images/weather.svg" alt="Partly cloudy weather">
+            </div>
+
+            <div class="weather-details">
+                <p><strong>Conditions:</strong> Partly Cloudy</p>
+                <p><strong>Temperature:</strong> <span id="temperature">10</span> °C</p>
+                <p><strong>Wind Speed:</strong> <span id="wind-speed">15</span> km/h</p>
+                <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
+            </div>
+        </section>
+    </section>
+</main>
+
+<footer>
+    <p>
+        &copy; <span id="currentyear"></span> Thelmo Fa'aoa | Tonga
+    </p>
+    <p>
+        Last Modified: <span id="lastModified"></span>
+    </p>
+</footer>
+
+
+</body>
+</html>

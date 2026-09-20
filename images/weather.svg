@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+    <title>Partly cloudy weather</title>
+
+    <circle cx="82" cy="42" r="25" fill="#f5b700"></circle>
+
+    <g fill="#ffffff" stroke="#333333" stroke-width="3">
+        <circle cx="50" cy="72" r="22"></circle>
+        <circle cx="72" cy="68" r="27"></circle>
+        <circle cx="94" cy="76" r="20"></circle>
+        <rect x="38" y="72" width="66" height="27" rx="13"></rect>
+    </g>
+</svg>
