@@ -1,158 +1,193 @@
 :root {
---primary-color: #c8102e;
---secondary-color: #ffffff;
---accent-color: #f4f4f4;
---text-color: #222222;
---heading-color: #8b0a1a;
---border-color: #cccccc;
---shadow: 0 3px 10px rgba(0, 0, 0, 0.18);
+    --primary-color: #c8102e;
+    --secondary-color: #ffffff;
+    --dark-color: #222222;
+    --light-color: #f4f4f4;
+    --card-color: #ffffff;
+    --border-color: #cccccc;
+    --shadow: 0 3px 10px rgba(0, 0, 0, 0.25);
 }
 
 * {
-  box-sizing: border-box;
-  }
+    box-sizing: border-box;
+}
 
 body {
-margin: 0;
-font-family: Arial, Helvetica, sans-serif;
-color: var(--text-color);
-background-color: var(--secondary-color);
-line-height: 1.6;
+    margin: 0;
+    font-family: "Roboto", Arial, sans-serif;
+    color: var(--dark-color);
+    background-color: var(--light-color);
+    line-height: 1.5;
 }
 
 header {
-background-color: var(--primary-color);
-color: var(--secondary-color);
-text-align: center;
-padding: 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+    border-bottom: 5px solid var(--dark-color);
 }
 
 header h1 {
-margin: 0;
-font-size: 2rem;
+    margin: 0;
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 2.2rem;
 }
 
 main {
-max-width: 1200px;
-margin: 0 auto;
+    width: 100%;
+    margin: 0 auto;
 }
 
 .hero {
-width: 100%;
-overflow: hidden;
+    width: 100%;
 }
 
-.hero picture,
-.hero img {
-display: block;
-width: 100%;
+.hero picture {
+    display: block;
+    width: 100%;
 }
 
 .hero img {
-height: auto;
-object-fit: cover;
+    display: block;
+    width: 100%;
+    height: auto;
 }
 
-.content-grid {
-display: grid;
-grid-template-columns: 1fr;
-gap: 1rem;
-padding: 1rem;
+.information {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .card {
-background-color: var(--accent-color);
-border: 1px solid var(--border-color);
-padding: 1.25rem;
-box-shadow: var(--shadow);
+    background-color: var(--card-color);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
 }
 
 .card h2 {
-margin-top: 0;
-color: var(--heading-color);
-border-bottom: 3px solid var(--primary-color);
-padding-bottom: 0.4rem;
+    margin: 0;
+    padding: 0.75rem 1rem;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
+    font-family: "Roboto Slab", Georgia, serif;
+    font-size: 1.5rem;
+    text-align: center;
 }
 
-.about p {
-margin-bottom: 1rem;
+.card dl {
+    margin: 0;
+    padding: 1.25rem;
+}
+
+.card dl div {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 0.75rem;
+    margin-bottom: 0.6rem;
+}
+
+.card dl div:last-child {
+    margin-bottom: 0;
+}
+
+.card dt {
+    font-weight: 700;
+    text-align: right;
+}
+
+.card dd {
+    margin: 0;
 }
 
 .weather-icon {
-text-align: center;
-margin: 1rem 0;
-}
-
-.weather-icon img {
-width: 90px;
-height: 90px;
-}
-
-.weather-details {
-display: grid;
-gap: 0.25rem;
-}
-
-.weather-details p {
-margin: 0;
+    display: block;
+    width: 70px;
+    height: 70px;
+    margin: 1rem auto 0.25rem;
 }
 
 footer {
-background-color: var(--primary-color);
-color: var(--secondary-color);
-text-align: center;
-padding: 1rem;
-margin-top: 1rem;
+    background-color: var(--dark-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
 }
 
 footer p {
-margin: 0.25rem;
-}
-
-/* Wider screens */
-@media screen and (min-width: 700px) {
-header {
-padding: 1.5rem;
+    margin: 0.25rem;
 }
 
 
-header h1 {
-    font-size: 2.75rem;
+/* ========================================
+   WIDER VIEW
+   ======================================== */
+
+@media screen and (min-width: 601px) {
+
+    header {
+        padding: 1.25rem;
+    }
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .hero img {
+        max-height: 600px;
+        object-fit: cover;
+    }
+
+    .information {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+        padding: 2rem;
+        gap: 2rem;
+    }
+
+    .card {
+        min-height: 350px;
+    }
+
+    /* Hide the mobile weather SVG on wider screens */
+    .weather-icon {
+        display: none;
+    }
+
+    /* Required W03 pseudo-element */
+    .weather-card h2::after {
+        content: " ⛅";
+        margin-left: 0.5rem;
+    }
 }
 
-.hero img {
-    max-height: 600px;
-}
 
-.content-grid {
-    grid-template-columns: 2fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    margin-top: -80px;
-    position: relative;
-}
+/* ========================================
+   MOBILE VIEW
+   ======================================== */
 
-.card {
-    background-color: rgba(255, 255, 255, 0.96);
-}
+@media screen and (max-width: 600px) {
 
-.weather h2::after {
-    content: " ⛅";
-    display: inline;
-    margin-left: 0.5rem;
-}
+    .hero img {
+        min-height: 250px;
+        object-fit: cover;
+    }
 
-.weather-icon {
-    display: none;
-}
+    .information {
+        padding: 1rem;
+    }
 
-.weather-details {
-    gap: 0.5rem;
-}
+    .card dl div {
+        grid-template-columns: 120px 1fr;
+    }
 
-footer {
-    margin-top: 0;
-}
-
-
+    .weather-icon {
+        display: block;
+    }
 }

@@ -3,72 +3,143 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn about Tonga, a beautiful island country in the South Pacific, including its geography, culture, and weather.">
-    <meta name="author" content="Thelmo Fa'aoa">
-    <title>Tonga | WDD 131 Country Page</title>
+
+    <meta name="description" content="Discover Tonga, a beautiful island kingdom in the South Pacific, including its data, culture, geography, and weather.">
+    <meta name="author" content="Thelmo Faaoa">
+
+    <title>Tonga | WDD 131 - Dynamic Web Fundamentals - Thelmo Faaoa</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Roboto+Slab:wght@700&display=swap" rel="stylesheet">
+
     <link rel="stylesheet" href="styles/place.css">
     <script src="scripts/place.js" defer></script>
 </head>
 
 <body>
+
     <header>
         <h1>Tonga</h1>
     </header>
 
     <main>
+
         <section class="hero">
             <picture>
-                 <source
-                    media="(min-width: 700px)"
-                    srcset="images/tonga-large.webp 1200w"
-                    sizes="(min-width: 700px) 1200px">
+                <source
+                    media="(max-width: 600px)"
+                    srcset="images/tonga-small.webp">
+
+                <source
+                    media="(min-width: 601px)"
+                    srcset="images/tonga-large.webp">
+
                 <img
-                    src="images/tonga-small.webp"
-                    srcset="images/tonga-small.webp 700w, images/tonga-large.webp 1200w"
-                    sizes="(max-width: 699px) 100vw, 1200px"
-                    alt="Beautiful tropical coastline of Tonga"
+                    src="images/tonga-large.webp"
+                    alt="Beautiful tropical coastline in Tonga"
                     width="1200"
-                    height="675">
+                    height="600">
             </picture>
         </section>
 
-        <section class="content-grid">
-            <section class="about card">
-                <h2>About Tonga</h2>
-                <p>
-                    Tonga is an island country in the South Pacific Ocean.
-                    It is made up of many islands and is known for its
-                    beautiful beaches, clear ocean water, coral reefs,
-                    traditional culture, and friendly communities.
-                </p>
-                <p>
-                    Tonga has a rich history and strong cultural traditions.
-                    Family, community, respect, and hospitality are important
-                    parts of Tongan life. The capital city is Nuku'alofa,
-                    located on the island of Tongatapu.
-                </p>
-            </section>
+        <section class="information">
 
-            <section class="weather card">
+            <article class="card data-card">
+                <h2>Data</h2>
+
+                <dl>
+                    <div>
+                        <dt>Area:</dt>
+                        <dd>747 km²</dd>
+                    </div>
+
+                    <div>
+                        <dt>Population:</dt>
+                        <dd>About 100,000</dd>
+                    </div>
+
+                    <div>
+                        <dt>Capital:</dt>
+                        <dd>Nuku'alofa</dd>
+                    </div>
+
+                    <div>
+                        <dt>Languages:</dt>
+                        <dd>Tongan and English</dd>
+                    </div>
+
+                    <div>
+                        <dt>Currency:</dt>
+                        <dd>Tongan paʻanga (TOP)</dd>
+                    </div>
+
+                    <div>
+                        <dt>Time Zone:</dt>
+                        <dd>UTC+13</dd>
+                    </div>
+
+                    <div>
+                        <dt>Calling Code:</dt>
+                        <dd>+676</dd>
+                    </div>
+
+                    <div>
+                        <dt>Internet TLD:</dt>
+                        <dd>.to</dd>
+                    </div>
+                </dl>
+            </article>
+
+            <article class="card weather-card">
                 <h2>Weather</h2>
 
-                <div class="weather-icon">
-                    <img src="images/weather.svg" alt="Partly cloudy weather">
-                </div>
+                <img
+                    class="weather-icon"
+                    src="images/weather.svg"
+                    alt="Partly cloudy weather"
+                    width="80"
+                    height="80">
 
-                <div class="weather-details">
-                    <p><strong>Conditions:</strong> Partly Cloudy</p>
-                    <p><strong>Temperature:</strong> <span id="temperature">10</span> °C</p>
-                    <p><strong>Wind Speed:</strong> <span id="wind-speed">15</span> km/h</p>
-                    <p><strong>Wind Chill:</strong> <span id="wind-chill">N/A</span></p>
-                </div>
-            </section>
+                <dl>
+                    <div>
+                        <dt>Temperature:</dt>
+                        <dd>9 °C</dd>
+                    </div>
+
+                    <div>
+                        <dt>Conditions:</dt>
+                        <dd>Partly Cloudy</dd>
+                    </div>
+
+                    <div>
+                        <dt>Wind:</dt>
+                        <dd>12 km/h</dd>
+                    </div>
+
+                    <div>
+                        <dt>Wind Chill:</dt>
+                        <dd><span id="windchill">N/A</span></dd>
+                    </div>
+                </dl>
+            </article>
+
         </section>
+
     </main>
 
     <footer>
-        <p>&copy; <span id="currentyear"></span> Thelmo Fa'aoa | Tonga</p>
-        <p>Last Modified: <span id="lastModified"></span></p>
+        <p>
+            &copy; <span id="currentyear"></span>
+            Thelmo Faaoa | Tonga
+        </p>
+
+        <p>
+            Last Modified:
+            <span id="lastModified"></span>
+        </p>
     </footer>
+
 </body>
 </html>
